@@ -1,0 +1,247 @@
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: yellow;
+    justify-content:center;
+    display: flex;
+}
+/* MENU*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu {
+  background-color: rgb(7, 1, 1);
+  filter: brightness(0.7);
+  height: 30px;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu ul li a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: yellow;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.menu ul li a:hover {
+  transform: scale(1.05);
+}
+  
+
+/*MENU*/
+
+/*BUSCADOR*/
+
+.buscador {
+  display: flex; /* Para alinear horizontalmente */
+  align-items: center; /* Centrar verticalmente los elementos */
+  padding: 10px;
+  justify-content:center;
+  
+}
+
+#busqueda {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  margin-right: 10px; /* Espacio entre el campo y el botón */
+}
+
+.buscador button {
+  padding: 8px 16px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buscador button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+  #busqueda {
+      width: 100%; /* El campo ocupa todo el ancho en pantallas pequeñas */
+      margin-right: 0;
+      margin-bottom: 10px; /* Espacio entre el campo y el botón */
+  }
+  .buscador{
+      flex-direction: column;
+      align-items: stretch;
+  }
+}
+
+/*BUSCADOR*/
+/*PORTADA*/
+
+section {
+    display: flex;
+    width: 100%;
+    height: 330px;
+    align-items: center;
+    justify-content: center;
+  }
+  section h3 {
+    position: absolute;
+    color: yellow;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .hombre_1, .hombre_2, .hombre_3 {
+    width: 20%;
+    height: 300px;
+    filter: brightness(0.7);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  
+  .hombre_1 {
+    background-image: url('https://plus.unsplash.com/premium_photo-1727967189841-639e59f179cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D');
+  }
+  
+  .hombre_2 {
+    background-image: url('https://plus.unsplash.com/premium_photo-1689371956254-1a8adca96b78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW9kZWxvJTIwZGUlMjByb3BhJTIwbXVqZXJ8ZW58MHx8MHx8fDA%3D');
+  }
+  
+  .hombre_3 {
+    background-image: url('https://plus.unsplash.com/premium_photo-1727967193973-2132b6ff3a80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8');
+  }
+/*PORTADA*/
+
+
+/*SUBTITULO*/
+
+.subtitulo h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  align-items: center;
+}
+/*SUBTITULO*/
+
+
+/*PRODUCTOS*/
+
+
+.ofertas {
+    text-align: center;
+    padding: 470px 17px;/*mueve el contenedor para ariba o a la derecha*/
+    background-color: #f9f9f9;
+    max-height: 20%;
+  }
+  
+  .ofertas h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    
+  }
+  
+  .producto {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para posicionar el top-label */
+}
+  
+  .producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; 
+  }
+  
+  .producto .info {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .producto h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: black;
+  }
+  
+  .producto p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .top-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e0f2f7; /* Color de fondo claro */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    
+  
+  }
+  
+  .producto img:hover {
+      transform: scale(1.1); 
+  }
+
+/*PRODUCTOS*/
+
+/*CONTACTO*/
+
+footer {
+  background-color:black;
+  color: yellow;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+
+}
+
+.contact {
+  margin-bottom: 10px;
+}
+
+.redes img {
+  width: 40px; /* Ajusta el tamaño de los iconos de redes sociales */
+  height: auto;
+  margin: 0 5px;
+  background-color: yellow;
+}
+
+/*CONTACTO*/

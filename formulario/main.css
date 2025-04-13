@@ -1,0 +1,140 @@
+:root {
+  --primary: #FFD700;       /* Amarillo dorado */
+  --primary-dark: #FFC600;  /* Amarillo más oscuro para hover/active */
+  --background: #000000;    /* Fondo negro */
+  --card-bg: #1A1A1A;       /* Fondo de tarjeta (gris muy oscuro) */
+  --text: #FFFFFF;          /* Texto blanco */
+  --text-light: #CCCCCC;    /* Texto gris claro (para placeholders) */
+  --border: #333333;        /* Bordes gris oscuro */
+  --success: #FFD700;       /* Amarillo para mensajes de éxito */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}/*declaracion de variables*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;/*elimina el margen predeterminado*/
+  padding: 0;/*elimina el relleno predeterminado*/
+  box-sizing: border-box;/*elimina el ancho total predeterminado*/
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  font-family: var(--font-main);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.1); /* Sombra amarilla sutil */  overflow: hidden;/*oculta cualquier contenido que sobre salga del contenedor*/
+  animation: fadeIn 0.4s ease-out forwards;/*Hace que el contenedor aparezca con un efecto de fundido suave al cargar la página.*/
+}
+/*LOGIN HEADER*/
+.login-header {
+  padding: 2rem 2rem 1rem;
+  text-align: center;
+}
+
+.login-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.login-header p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/*LOGIN HEADER*/
+
+.login-form {
+  padding: 1.5rem 2rem 2.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: var(--card-bg);
+}
+
+.form-control:focus {
+  outline: none;/* Elimina el outline predeterminado del navegador */
+  border-color: var(--primary);/*cambia el color del borde de las lineas de texto al hacer click*/
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2); /* Sombra amarilla difuminada */
+  }
+
+.form-control::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;/* Ligera transparencia para no competir con el texto real */
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary); /* Amarillo */
+  color: #000000; /* Texto negro para mejor contraste */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}/*boton de enviar*/
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.form-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0;/*inicia invisible*/
+     transform: translateY(20px); } /* Empieza 20px más abajo */
+  to { opacity: 1;/*termina visible*/
+     transform: translateY(0); } /* Vuelve a su posición original */
+}/*animacion css*/
+
